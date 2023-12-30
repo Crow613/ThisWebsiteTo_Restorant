@@ -1,7 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SiteController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\BookingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +19,16 @@ use App\Http\Controllers\SiteController;
 |
 */
 
-Route::get('/', [SiteController::class, 'home'])->name('site.home');
+Route::get('/', [HomeController::class, 'home'])->name('home.home');
+
+Route::get('about/about', [AboutController::class, 'about'])->name('about.about');
+
+Route::get('service/service', [ServiceController::class, 'service'])->name('service.service');
+
+Route::get('contact/contact', [ContactController::class, 'contact'])->name('contact.contact');
+
+Route::get('menu/menu', [MenuController::class, 'menu'])->name('menu.menu');
+
+Route::get('booking/booking', [BookingController::class, 'booking'])->name('booking.booking');
+
+Route::get('testimonial/testimonial', [MenuController::class, 'testimonial'])->name('testimonial.testimonial');
